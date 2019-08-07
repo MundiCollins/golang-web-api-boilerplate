@@ -17,7 +17,7 @@ type PostCollection struct {
 	Posts []Post 	`json:"items"`
 }
 
-func getPosts(db *sql.DB) PostCollection {
+func GetPosts(db *sql.DB) PostCollection {
 	query := "SELECT * FROM posts"
 
 	rows, err := db.Query(query)
